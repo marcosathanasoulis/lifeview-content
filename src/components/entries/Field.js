@@ -6,6 +6,7 @@ import formatDate from '../../utils/format-date'
 import Thumbnail from '../assets/Thumbnail'
 import EntryLinkContainer from './EntryLinkContainer'
 import marked from 'marked'
+import NYTInfo from '../NYTInfo'
 
 function Field ({definition, content, location}) {
   return (
@@ -33,6 +34,9 @@ function renderContent (content, definition, location) {
   } else if (type === 'Link' && linkType === 'Asset' && content.sys.type === 'Link') {
     return <Thumbnail url='missing' fileName='Missing' description={`Link to ${content.sys.id} is missing.`} />
   } else if (type === 'Array' && Array.isArray(content)) {
+    if (definition.name === "ISBN") {
+      console.log(content)
+    }
     return renderList(content, definition.items, location)
   } else if (type === 'Location' && isLocation(content)) {
     return renderLocation(content)

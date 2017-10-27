@@ -32,8 +32,7 @@ class App extends React.Component {
         <nav>
           <div styleName='nav-container'>
             <div styleName='logo'>
-              <img src='/contentful_logo_120x90@2x.png' height='32' />
-              <span>Discovery App</span>
+              <span>LifeView Content Explorer</span>
             </div>
             <div styleName={this.shouldDisplay()}>
               <Nav location={this.props.location} />

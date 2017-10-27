@@ -4,6 +4,7 @@ import CSSModules from 'react-css-modules'
 import styles from './Field.css'
 import Field from './Field'
 
+
 function Entry ({entry, location}) {
   const contentType = scour(entry.sys.contentType)
   const displayFieldId = contentType.get('displayField')
