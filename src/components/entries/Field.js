@@ -6,7 +6,6 @@ import formatDate from '../../utils/format-date'
 import Thumbnail from '../assets/Thumbnail'
 import EntryLinkContainer from './EntryLinkContainer'
 import marked from 'marked'
-import NYTInfo from '../NYTInfo'
 
 function Field ({definition, content, location}) {
   return (
